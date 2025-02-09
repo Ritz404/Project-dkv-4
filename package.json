@@ -1,0 +1,22 @@
+{
+  "name": "scrape-server",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "vercel-build": "echo 'Vercel build complete'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "puppeteer": "^24.1.1",
+    "cheerio": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

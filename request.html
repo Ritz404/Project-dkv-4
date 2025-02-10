@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Fitur - Akane Bot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            background: white;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            width: 180px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .menu a {
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .menu a:hover {
+            background: #2575fc;
+            color: white;
+        }
+
+        .menu-toggle {
+            font-size: 24px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        /* Request Section */
+        .request-container {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            border-radius: 0 0 50px 50px;
+            min-height: 100vh;
+        }
+
+        .request-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: 20px auto;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+
+        .request-box p {
+            margin-bottom: 15px;
+        }
+
+        /* WhatsApp Button */
+        .btn-wa {
+            background: #25d366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-wa:hover {
+            background: #1ebe5d;
+            transform: scale(1.05);
+        }
+
+        /* Back to Home Button */
+        .btn-home {
+            background: #ff4757;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-home:hover {
+            background: #ff6b81;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo font-bold text-lg">Akane Bot</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu" id="menu">
+            <a href="/home">Home</a>
+            <a href="/feature">Feature</a>
+            <a href="/request">Request</a>
+            <a href="/reports">Reports</a>
+        </div>
+    </nav>
+
+    <!-- Request Section -->
+    <section class="request-container">
+        <h2 class="text-3xl font-semibold">📩 Request Fitur</h2>
+        <div class="request-box">
+            <p>Ingin menambahkan fitur baru di Akane Bot? Kirimkan permintaan Anda langsung via WhatsApp!</p>
+
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20mengajukan%20request%20fitur%20untuk%20Akane%20Bot:%20" class="btn-wa">
+                📲 Request via WhatsApp
+            </a>
+        </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu) {
+                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("menu");
+            var toggleButton = document.querySelector(".menu-toggle");
+
+            if (menu && !menu.contains(event.target) && !toggleButton.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+
+        // Cegah flash layar putih dengan event listener untuk memuat halaman sepenuhnya
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.display = "block";
+        });
+    </script>
+
+</body>
+</html>

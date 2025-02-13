@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freya Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .fade-in { animation: fadeIn 1.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .features-container, .benefits-container {
+            text-align: center;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .benefit-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .benefit-box:hover {
+            transform: translateY(-5px);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+        .btn-free { background: #3b82f6; color: white; }
+        .btn-free:hover { background: #2563eb; }
+        .btn-premium { background: #f59e0b; color: white; }
+        .btn-premium:hover { background: #d97706; }
+        .btn-vip { background: #ef4444; color: white; }
+        .btn-vip:hover { background: #dc2626; }
+        .btn-ultimate { background: #9333ea; color: white; }
+        .btn-ultimate:hover { background: #7e22ce; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://tmpfiles.org/dl/20644953/1b060cc2a0538bf5e8a8463d76c3332e.jpg" alt="Freya Bot logo" class="w-10 h-10 rounded-full">
+                <span class="text-xl font-semibold text-gray-900 fade-in">Freya Bot</span>
+            </div>
+            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+        <!-- Hamburger Menu -->
+    <div id="menu" class="hidden bg-white shadow-lg p-4">
+        <a href="/" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">🏠 Home</a>
+        <a href="/features" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">🚀 Fitur</a>
+        <a href="/price" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">📩 Price</a>
+        <a href="/contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">⚠️ Contact</a>
+    </div>
+
+    <!-- Benefit Section -->
+    <section class="benefits-container">
+        <h2 class="text-3xl font-semibold">Sewa Bot</h2>
+        <div class="benefits">
+            <!-- Paket Free -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-blue-600">Gratis Sewa Bot</h3>
+                <ul>
+                    <li>✅ Akses fitur dasar</li>
+                    <li>✅ Respon cepat</li>
+                    <li>✅ Penggunaan tanpa batas</li>
+                    <li>✅ Update fitur berkala</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+mendaftar+Freya+Bot+Free" target="_blank" class="btn btn-free">Coba Sekarang</a>
+            </div>
+
+            <!-- Paket Premium -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-yellow-600">Rp.10.000</h3>
+                <ul>
+                    <li>✅ Aktif 20 Hari</li>
+                    <li>✅ Semua fitur Free</li>
+                    <li>✅ Akses fitur eksklusif</li>
+                    <li>✅ Prioritas customer support</li>
+                    <li>✅ Custom perintah bot</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+berlangganan+Freya+Bot+Premium" target="_blank" class="btn btn-premium">Dapatkan Premium</a>
+            </div>
+
+            <!-- Paket VIP -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-red-600">Rp.15.000</h3>
+                <ul>
+                    <li>✅ Aktif 30 Hari</li>
+                    <li>✅ Semua fitur Premium</li>
+                    <li>✅ Akses penuh ke fitur beta</li>
+                    <li>✅ Layanan personalisasi bot</li>
+                    <li>✅ Keamanan & enkripsi tambahan</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+berlangganan+Freya+Bot+VIP" target="_blank" class="btn btn-vip">Dapatkan Premium</a>
+            </div>
+
+            <!-- Paket Ultimate -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-purple-600">Rp.20.000</h3>
+                <ul> 
+                    <li>✅ Aktif 35 Hari</li>
+                    <li>✅ Semua fitur VIP</li>
+                    <li>✅ Server prioritas & performa tinggi</li>
+                    <li>✅ Integrasi API & otomatisasi</li>
+                    <li>✅ Dukungan teknis 24/7</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+berlangganan+Freya+Bot+Ultimate" target="_blank" class="btn btn-ultimate">Dapatkan Premium</a>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Benefit Section -->
+    <section class="benefits-container">
+        <h2 class="text-3xl font-semibold">Jadi Bot</h2>
+        <div class="benefits">
+            <!-- Paket Free -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-blue-600">Rp.10.000</h3>
+                <ul>
+                    <li>✅ Aktif 20 Hari</li>
+                    <li>✅ Respon cepat</li>
+                    <li>✅ Bergaransi</li>
+                    <li>✅ Bebas Sewa</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+mendaftar+Freya+Bot+Free" target="_blank" class="btn btn-free">Buy Sekarang</a>
+            </div>
+
+            <!-- Paket Premium -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-yellow-600">Rp.15.000</h3>
+                <ul>
+                    <li>✅ Aktif 30 Hari</li>
+                    <li>✅ Respon cepat</li>
+                    <li>✅ Bergaransi</li>
+                    <li>✅ Bebas Sewa</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+berlangganan+Jadi+Bot+Freya+MD" target="_blank" class="btn btn-premium">Buy Sekarang</a>
+            </div>
+
+            <!-- Paket VIP -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-red-600">Rp.25.000</h3>
+                <ul>
+                    <li>✅ Aktif 45 Hari</li>
+                    <li>✅ Respon cepat</li>
+                    <li>✅ Bergaransi</li>
+                    <li>✅ Bebas Sewa</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+berlangganan+Jadi+Bot+Freya+MD" target="_blank" class="btn btn-vip">Buy Sekarang</a>
+            </div>
+
+            <!-- Paket Ultimate -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-purple-600">Rp.30.000</h3>
+                <ul>
+                    <li>✅ Aktif 50 Hari</li>
+                    <li>✅ Respon cepat</li>
+                    <li>✅ Bergaransi</li>
+                    <li>✅ Bebas Sewa</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+berlangganan+Jadi+Bot+Freya+MD" target="_blank" class="btn btn-ultimate">Buy Sekarang</a>
+            </div>
+        </div>
+    </section>
+    
+            <!-- Benefit Section -->
+    <section class="benefits-container">
+        <h2 class="text-3xl font-semibold">Script Bot Premium</h2>
+        <div class="benefits">
+            <!-- Paket Free -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-blue-600">Freya MD</h3>
+                <ul>
+                    <li>✅ No Enc</li>
+                    <li>✅ Free Update</li>
+                    <li>✅ Free Apikey</li>
+                    <li>✅ Type Plugins Esm</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+membeli+script+freya+md" target="_blank" class="btn btn-free">Buy Sekarang</a>
+            </div>
+
+            <!-- Paket Premium -->
+            <div class="benefit-box">
+                <h3 class="text-xl font-semibold text-yellow-600">Shiroko MD</h3>
+                <ul>
+                    <li>✅ No Enc</li>
+                    <li>✅ Free Update</li>
+                    <li>✅ Free Apikey</li>
+                    <li>✅ Type Plugins Cjs</li>
+                </ul>
+                <a href="https://wa.me/6283187610223?text=Halo%2C+saya+ingin+membeli+script+shiroko+md" target="_blank" class="btn btn-premium">Buy Sekarang</a>
+            </div>
+      
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
